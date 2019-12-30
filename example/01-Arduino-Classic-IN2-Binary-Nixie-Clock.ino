@@ -1,5 +1,5 @@
 // IN-2 Binary Nixie Clock by Marcin Saj https://nixietester.com
-// https://github.com/marcinsaj/in2-binary-nixie-clock
+// https://github.com/marcinsaj/IN2-Binary-Nixie-Clock
 //
 // Classic IN-2 Binary Nixie Clock Example
 //
