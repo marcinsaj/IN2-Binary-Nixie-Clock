@@ -5,6 +5,14 @@
 //
 // This example demonstrates how to set the RTC time, read time from RTC and display on nixie tubes.
 // Serial monitor is required to display basic options.
+//
+// Hardware:
+// Arduino Nano / Nano Every / Nano IoT 33 & IN-2 Binary Nixie Clock 
+// Nixie Power Supply Module, 2 x Nixie Tube Driver V2 & RTC DS3231 module
+// Nixie clock require 12V, 1A power supply
+// Schematic IN-2 Binary Nixie Clock - work in progress
+// Schematic Nixie Tube Driver V2 - work in progress
+// Schematic Nixie Power Supply Module - work in progress
 // DS3231 RTC datasheet: https://datasheets.maximintegrated.com/en/ds/DS3231.pdf
 
 #include <RTClib.h>           // https://github.com/adafruit/RTClib
@@ -26,11 +34,9 @@ byte M0[] = {35, 29, 42, 18, 11,  9};     // "0" Minutes
 byte H1[] = {26, 24, 45, 15, 17, 12};     // "1" Hours
 byte H0[] = {27, 25, 44, 14, 16, 13};     // "0" Hours
 
-// 18 bits for "1", 18 bits for "0"
-// 8 bits for gaps - nixie drivers not connected outputs
-// Check clock schematic: 
-// 2 bits for nixie driver gaps 
-// Check driver schematic: 
+// 18 bits for "1", 18 bits for "0" - check clock schematic
+// 8 bits for gaps - nixie drivers not connected outputs 
+// 2 bits for nixie driver gaps - check driver schematic 
 
 // Nixie Display bit array
 boolean nixieBitArray[46]; 
@@ -98,14 +104,15 @@ void setup()
 
   if(serialState == 0)
   {
-    // Turn ON nixie power supply module if the settings have not been selected
+    // Turn on the nixie power module if settings have not been selected
     digitalWrite(EN_NPS, LOW);   
   }    
 }
 
+
 void loop ()
 {
-  // Send time to the RTC if the time settings have been selected
+  // Set a new time if settings have been selected
   if(serialState == 1)
   {
     SetNewTime();
@@ -178,8 +185,7 @@ void DisplayTime()
   
   NixieDisplay(timeHour, timeMinute, timeSecond);
 }
-
-// Function with optional parameters 
+ 
 void NixieDisplay(byte hours, byte minutes, byte seconds)
 {
   boolean bitTime = 0;
