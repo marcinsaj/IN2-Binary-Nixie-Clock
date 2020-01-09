@@ -9,3 +9,5 @@ IN-2 Binary Nixie Clock
 
 
 <p align="center"><img src="https://raw.githubusercontent.com/marcinsaj/in2-binary-nixie-clock/master/extras/in2-binary-nixie-clock_00.jpg"></p>
+
+<p align="center"><img src="https://raw.githubusercontent.com/marcinsaj/in2-binary-nixie-clock/master/extras/in-2-binary-nixie-clock-diagram.jpg"></p>
