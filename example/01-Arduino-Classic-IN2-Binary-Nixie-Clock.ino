@@ -27,12 +27,12 @@
 
 // Bit numbers declaration for nixie tubes display
 //           32  16   8   4   2   1
-byte S1[] = {36, 39, 41, 21,  2,  0};     // "1" Seconds
-byte S0[] = {37, 38, 40, 20,  3,  1};     // "0" Seconds
-byte M1[] = {34, 28, 43, 19, 10,  8};     // "1" Minutes
-byte M0[] = {35, 29, 42, 18, 11,  9};     // "0" Minutes
 byte H1[] = {26, 24, 45, 15, 17, 12};     // "1" Hours
 byte H0[] = {27, 25, 44, 14, 16, 13};     // "0" Hours
+byte M1[] = {34, 28, 43, 19, 10,  8};     // "1" Minutes
+byte M0[] = {35, 29, 42, 18, 11,  9};     // "0" Minutes
+byte S1[] = {36, 39, 41, 21,  2,  0};     // "1" Seconds
+byte S0[] = {37, 38, 40, 20,  3,  1};     // "0" Seconds
 
 // 18 bits for "1", 18 bits for "0" - check clock schematic
 // 8 bits for gaps - nixie drivers not connected outputs 
@@ -70,7 +70,7 @@ void setup()
   digitalWrite(EN_PIN, LOW);
 
   Serial.println("#############################################################");
-  Serial.println("----- Nixie Clock Thermometer Hygrometer Arduino Shield -----");
+  Serial.println("------------------ IN-2 Binary Nixie CLock ------------------");
   Serial.println("---------------- If you want to set new Time ----------------");
   Serial.println("--------------- press ENTER within 5 seconds ----------------");
 
