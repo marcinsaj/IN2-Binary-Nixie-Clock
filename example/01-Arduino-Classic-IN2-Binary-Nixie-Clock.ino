@@ -70,7 +70,7 @@ void setup()
   digitalWrite(EN_PIN, LOW);
 
   Serial.println("#############################################################");
-  Serial.println("------------------ IN-2 Binary Nixie CLock ------------------");
+  Serial.println("------------------ IN-2 Binary Nixie Clock ------------------");
   Serial.println("---------------- If you want to set new Time ----------------");
   Serial.println("--------------- press ENTER within 5 seconds ----------------");
 
