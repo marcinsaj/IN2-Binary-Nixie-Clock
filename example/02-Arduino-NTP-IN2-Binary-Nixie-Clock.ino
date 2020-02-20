@@ -240,16 +240,22 @@ void PrintWiFiStatus()
 void DisplayTime()
 {
   DateTime now = rtcModule.now();
- 
+  
+  timeSecond = now.second();
+  timeMinute = now.minute();
   timeHour = now.hour();
+ 
+  //if(timeHour == timeToSynchronizeTime && timeMinute == 0 && timeSecond == 0)
+  if(timeHour == 3 && timeMinute == 0 && timeSecond == 0)
+  {
+    timeToSynchronizeTimeFlag = 1;  
+  }
+  
   byte timeFormat = HH;
     
   // Check time format and adjust
   if(timeFormat == 12 && timeHour > 12) timeHour = timeHour - 12;
   if(timeFormat == 12 && timeHour == 0) timeHour = 12; 
-
-  timeMinute = now.minute();
-  timeSecond = now.second();
 
   Serial.print("Time: ");
   if(timeHour < 10)   Serial.print("0");
@@ -261,13 +267,7 @@ void DisplayTime()
   if(timeSecond < 10) Serial.print("0");
   Serial.println(timeSecond);      
 
-  NixieDisplay(timeHour, timeMinute, timeSecond);   
-
-  //if(timeHour == timeToSynchronizeTime && timeMinute == 0 && timeSecond == 0)
-  if(timeHour == 13 && timeMinute == 57 && timeSecond == 0)
-  {
-    timeToSynchronizeTimeFlag = 1;  
-  }
+  NixieDisplay(timeHour, timeMinute, timeSecond);
 }
  
 void NixieDisplay(byte hours, byte minutes, byte seconds)
