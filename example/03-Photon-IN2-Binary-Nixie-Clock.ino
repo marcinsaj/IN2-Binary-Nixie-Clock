@@ -1,29 +1,42 @@
-// work in progress...
+// IN-2 Binary Nixie Clock by Marcin Saj https://nixietester.com
+// https://github.com/marcinsaj/IN2-Binary-Nixie-Clock
+//
+// Photon IN-2 Binary Nixie Clock Example
+//
+// This example demonstrates how to connect clock to Particle Cloud and 
+// synchronizing (ones per day) RTC DS3231 time module with cloud time 
+// 
+// Serial monitor is required to debug synchronization
+//
+// Hardware:
+// WiFi signal
+// Particle Photon - https://docs.particle.io/photon/
+// IN-2 Binary Nixie Clock - https://nixietester.com/project/in-2-binary-nixie-clock/
+// Nixie Power Supply Module, 2 x Nixie Tube Driver V2 & RTC DS3231 module
+// Nixie clock require 12V, 1A power supply
+// Schematic IN-2 Binary Nixie Clock - work in progress
+// Schematic Nixie Tube Driver V2 - work in progress
+// Schematic Nixie Power Supply Module - work in progress
+// DS3231 RTC datasheet: https://datasheets.maximintegrated.com/en/ds/DS3231.pdf
 
+SYSTEM_THREAD(ENABLED);         // Enable automatic connection to WiFi and multi-threading 
 #include <RTClibrary.h>
 
-/*
-// system directives
-SYSTEM_MODE(SEMI_AUTOMATIC);
-SYSTEM_THREAD(ENABLED);
-STARTUP(WiFi.selectAntenna(ANT_EXTERNAL));
-*/
-
-RTC_DS3231 rtcModule;
+RTC_DS3231 rtcModule;           // RTC module library declaration
 
 int EN_NPS = D5;                // Nixie Power Supply enable pin - "ON" = 0, "OFF" = 1 
 int DIN_PIN = D2;               // Nixie driver (shift register) serial data input pin             
 int CLK_PIN = D4;               // Nixie driver clock input pin
 int EN_PIN = D3;                // Nixie driver enable input pin
 
-// Set your Time Zone e.g. +4, -2, -4.5 (- 4 hours na 30 minutes) 
+// Set your Time Zone e.g. +4, -2, -4.5 (4.5 = 4 hours na 30 minutes) 
 // https://en.wikipedia.org/wiki/List_of_time_zones_by_country
 double const timeZone = +1;
 
 // Choose Time Format 12/24 hour
-int const timeHourFormat = 24;
+int const timeHourFormat = 12;
 
-// Each day at 3AM, the RTC DS3231 time will be synchronize with WIFI time
+// Each day at 3AM, the RTC DS3231 time will be synchronize with WiFi time
 int const timeToSynchronizeTime = 3;
 bool timeToSynchronizeTimeFlag = false;
 
@@ -71,8 +84,6 @@ void setup()
     pinMode(EN_PIN, OUTPUT);
     digitalWrite(EN_PIN, LOW);  
     
-    digitalWrite(EN_NPS, LOW);      // Turn ON nixie power supply module
-    
     Serial.println("############################################################");
     Serial.println("-------------- Photon IN-2 Binary Nixie Clock --------------");
     Serial.println("############################################################");
@@ -80,16 +91,11 @@ void setup()
 
     Time.zone(timeZone);            // Set user time zone
     SynchronizeTimeWiFi();          // Time synchronization
+    digitalWrite(EN_NPS, LOW);      // Turn ON nixie power supply module
 }
 
 void loop ()
 {
-    // Check if it's time to synchronize the time  
-    if(timeToSynchronizeTimeFlag == true)
-    {
-        SynchronizeTimeWiFi();    
-    }
-
     // Millis time start
     current_millis = millis();
 
@@ -100,6 +106,42 @@ void loop ()
         DisplayTime();
         previous_millis = current_millis;      
     }
+    
+    // Check if it's time to synchronize the time  
+    if(timeToSynchronizeTimeFlag == true)
+    {
+        // Time synchronization
+        SynchronizeTimeWiFi();    
+    }
+}
+
+void SynchronizeTimeWiFi()
+{
+    Particle.syncTime();
+    
+    // Check what time format has been chosen 12/24
+    if(timeHourFormat == 12)
+    {
+        currentHour = Time.hourFormat12();
+    }
+    else if (timeHourFormat == 24)
+    {
+        currentHour = Time.hour();
+    }
+    
+    currentMinute = Time.minute();
+    currentSecond = Time.second();
+    
+    // Year, Month and Day are not needed
+    rtcModule.adjust(DateTime(0, 0, 0, currentHour, currentMinute, currentSecond));
+    timeToSynchronizeTimeFlag = false;
+    
+    Serial.println();
+    Serial.println("############################################################");
+    Serial.println("------------------- Time synchronization -------------------");
+    Serial.println("############################################################");
+    Serial.println();
+    delay(3000);
 }
 
 void DisplayTime()
@@ -110,15 +152,13 @@ void DisplayTime()
     currentMinute = now.minute();
     currentSecond = now.second();
 
-    //if(timeHour == 13 && timeMinute == 57 && timeSecond == 0)
+    NixieDisplay(currentHour, currentMinute, currentSecond);
+    
     // Check if it's time to synchronize the time
     if(currentHour == timeToSynchronizeTime && currentMinute == 0 && currentSecond == 0 && Time.isAM())
     {
         timeToSynchronizeTimeFlag = true;  
     }
-    
-    NixieDisplay(currentHour, currentMinute, currentSecond);
-    
     
     Serial.print("Time: ");
     if(currentHour < 10)   Serial.print("0");
@@ -137,43 +177,7 @@ void DisplayTime()
     }
     
     Serial.println();
-    
 }
-
-
-void SynchronizeTimeWiFi()
-{
-    Particle.syncTime();
-    
-    Serial.println("Time synchronization");
-    
-    // Check what time format has been chosen 12/24
-    if(timeHourFormat == 12)
-    {
-        currentHour = Time.hourFormat12();
-    }
-    else if (timeHourFormat == 24)
-    {
-        currentHour = Time.hour();
-    }
-    
-    currentMinute = Time.minute();
-    currentSecond = Time.second();
-    
-    // Year, Month and Day are not needed
-    rtcModule.adjust(DateTime(0, 0, 0, currentHour, currentMinute, currentSecond));
-    timeToSynchronizeTimeFlag = false;
-}
-
-
-
-
-
-
-
-
-
-
  
 void NixieDisplay(int hours, int minutes, int seconds)
 {
