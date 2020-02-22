@@ -10,7 +10,8 @@
 //
 // Hardware:
 // WiFi signal
-// Arduino Nano IoT 33 & IN-2 Binary Nixie Clock 
+// Arduino Nano IoT 33 - https://store.arduino.cc/arduino-nano-33-iot
+// IN-2 Binary Nixie Clock - https://nixietester.com/project/in-2-binary-nixie-clock/
 // Nixie Power Supply Module, 2 x Nixie Tube Driver V2 & RTC DS3231 module
 // Nixie clock require 12V, 1A power supply
 // Schematic IN-2 Binary Nixie Clock - work in progress
