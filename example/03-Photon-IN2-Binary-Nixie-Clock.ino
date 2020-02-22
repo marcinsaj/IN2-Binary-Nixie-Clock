@@ -15,8 +15,8 @@
 // Nixie Power Supply Module, 2 x Nixie Tube Driver V2 & RTC DS3231 module
 // Nixie clock require 12V, 1A power supply
 // Schematic IN-2 Binary Nixie Clock - work in progress
-// Schematic Nixie Tube Driver V2 - work in progress
-// Schematic Nixie Power Supply Module - work in progress
+// Schematic Nixie Tube Driver V2 - http://bit.ly/NTD-Schematic
+// Schematic Nixie Power Supply Module - http://bit.ly/NPS-Schematic
 // DS3231 RTC datasheet: https://datasheets.maximintegrated.com/en/ds/DS3231.pdf
 
 SYSTEM_THREAD(ENABLED);         // Enable automatic connection to WiFi and multi-threading 
