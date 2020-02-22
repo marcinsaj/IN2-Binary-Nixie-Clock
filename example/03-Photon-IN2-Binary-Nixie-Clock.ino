@@ -10,8 +10,8 @@
 //
 // Hardware:
 // WiFi signal
-// Particle Photon - https://docs.particle.io/photon/
 // IN-2 Binary Nixie Clock - https://nixietester.com/project/in-2-binary-nixie-clock/
+// Particle Photon - https://docs.particle.io/photon/
 // Nixie Power Supply Module, 2 x Nixie Tube Driver V2 & RTC DS3231 module
 // Nixie clock require 12V, 1A power supply
 // Schematic IN-2 Binary Nixie Clock - work in progress
