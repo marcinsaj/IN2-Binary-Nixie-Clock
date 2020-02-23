@@ -14,7 +14,7 @@
 // Particle Photon - https://docs.particle.io/photon/
 // Nixie Power Supply Module, 2 x Nixie Tube Driver V2 & RTC DS3231 module
 // Nixie clock require 12V, 1A power supply
-// Schematic IN-2 Binary Nixie Clock - work in progress
+// Schematic IN-2 Binary Nixie Clock - http://bit.ly/IN2-BNC-Schematic
 // Schematic Nixie Tube Driver V2 - http://bit.ly/NTD-Schematic
 // Schematic Nixie Power Supply Module - http://bit.ly/NPS-Schematic
 // DS3231 RTC datasheet: https://datasheets.maximintegrated.com/en/ds/DS3231.pdf
