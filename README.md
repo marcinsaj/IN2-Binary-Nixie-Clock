@@ -11,9 +11,11 @@ IN-2 Binary Nixie Clock
 
 <p align="center"><img src="https://raw.githubusercontent.com/marcinsaj/in2-binary-nixie-clock/master/extras/in2-binary-nixie-clock_00.jpg"></p>
 
+# Diagram
 <p align="center"><img src="https://raw.githubusercontent.com/marcinsaj/in2-binary-nixie-clock/master/extras/in-2-binary-nixie-clock-diagram.jpg"></p>
 
+# How to Read IN-2 Binary Nixie Clock
 <p align="center"><img src="https://github.com/marcinsaj/IN2-Binary-Nixie-Clock/blob/master/extras/How-To-Read-IN2-Binary-Nixie-Clock.jpg"></p>
 
-
+# VCC Settings IN-2 Binary Nixie Clock
 <p align="center"><img src="https://github.com/marcinsaj/IN2-Binary-Nixie-Clock/blob/master/extras/VCC-Settings-IN2-Binary-Nixie-Clock.jpg"></p>
