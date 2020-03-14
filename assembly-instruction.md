@@ -31,34 +31,25 @@
 ## 8. VIN power connector, CON1 - DHT22 sensor connector
 <p align="center"><img src="https://github.com/marcinsaj/IN2-Binary-Nixie-Clock/blob/master/extras/assembly-instruction/images/in2-binary-nixie-clock-assembly-instruction-images_11.jpg"></p>
 
-## 9. Top Plate and screws M3 x 18 mm
+## 9. Tubes socket assembly
 <p align="center"><img src="https://github.com/marcinsaj/IN2-Binary-Nixie-Clock/blob/master/extras/assembly-instruction/in2-binary-nixie-clock-assembly-instruction_01.png"></p>
 
-## 9. Top Plate and screws M3 x 18 mm
 <p align="center"><img src="https://github.com/marcinsaj/IN2-Binary-Nixie-Clock/blob/master/extras/assembly-instruction/in2-binary-nixie-clock-assembly-instruction_02.png"></p>
 
-## 9. Top Plate and screws M3 x 18 mm
 <p align="center"><img src="https://github.com/marcinsaj/IN2-Binary-Nixie-Clock/blob/master/extras/assembly-instruction/in2-binary-nixie-clock-assembly-instruction_03.png"></p>
 
-## 9. Top Plate and screws M3 x 18 mm
 <p align="center"><img src="https://github.com/marcinsaj/IN2-Binary-Nixie-Clock/blob/master/extras/assembly-instruction/in2-binary-nixie-clock-assembly-instruction_04.png"></p>
 
-## 9. Top Plate and screws M3 x 18 mm
 <p align="center"><img src="https://github.com/marcinsaj/IN2-Binary-Nixie-Clock/blob/master/extras/assembly-instruction/in2-binary-nixie-clock-assembly-instruction_05.png"></p>
 
-## 9. Top Plate and screws M3 x 18 mm
 <p align="center"><img src="https://github.com/marcinsaj/IN2-Binary-Nixie-Clock/blob/master/extras/assembly-instruction/in2-binary-nixie-clock-assembly-instruction_06.png"></p>
 
-## 9. Top Plate and screws M3 x 18 mm
 <p align="center"><img src="https://github.com/marcinsaj/IN2-Binary-Nixie-Clock/blob/master/extras/assembly-instruction/in2-binary-nixie-clock-assembly-instruction_07.png"></p>
 
-## 9. Top Plate and screws M3 x 18 mm
 <p align="center"><img src="https://github.com/marcinsaj/IN2-Binary-Nixie-Clock/blob/master/extras/assembly-instruction/in2-binary-nixie-clock-assembly-instruction_08.png"></p>
 
-## 9. Top Plate and screws M3 x 18 mm
 <p align="center"><img src="https://github.com/marcinsaj/IN2-Binary-Nixie-Clock/blob/master/extras/assembly-instruction/in2-binary-nixie-clock-assembly-instruction_09.png"></p>
 
-## 9. Top Plate and screws M3 x 18 mm
 <p align="center"><img src="https://github.com/marcinsaj/IN2-Binary-Nixie-Clock/blob/master/extras/assembly-instruction/images/in2-binary-nixie-clock-assembly-instruction-images_12.jpg"></p>
 
 <p align="center"><img src="https://github.com/marcinsaj/IN2-Binary-Nixie-Clock/blob/master/extras/assembly-instruction/in2-binary-nixie-clock-assembly-instruction_10.png"></p>
