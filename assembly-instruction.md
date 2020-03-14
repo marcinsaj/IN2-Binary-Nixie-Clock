@@ -40,6 +40,8 @@
 
 <p align="center"><img src="https://github.com/marcinsaj/IN2-Binary-Nixie-Clock/blob/master/extras/assembly-instruction/in2-binary-nixie-clock-assembly-instruction_04.png"></p>
 
+<p align="center"><img src="https://github.com/marcinsaj/IN2-Binary-Nixie-Clock/blob/master/extras/assembly-instruction/in2-nixie-binary-clock-tube-socket-assembly.png"></p>
+
 <p align="center"><img src="https://github.com/marcinsaj/IN2-Binary-Nixie-Clock/blob/master/extras/assembly-instruction/in2-binary-nixie-clock-assembly-instruction_05.png"></p>
 
 <p align="center"><img src="https://github.com/marcinsaj/IN2-Binary-Nixie-Clock/blob/master/extras/assembly-instruction/in2-binary-nixie-clock-assembly-instruction_06.png"></p>
