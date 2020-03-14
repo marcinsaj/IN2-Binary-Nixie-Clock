@@ -2,7 +2,7 @@
 IN-2 Binary Nixie Clock
 
 - <a href="https://github.com/marcinsaj/IN2-Binary-Nixie-Clock/blob/master/datasheet/How-To-Read-IN2-Binary-Nixie-Clock.pdf">How To Read IN-2 Binary Nixie Clock</a>
-- Assembly Instruction - work in progress
+- <a href="https://github.com/marcinsaj/IN2-Binary-Nixie-Clock/blob/master/assembly-instruction.md">Assembly Instruction</a>
 - <a href="https://github.com/marcinsaj/in2-binary-nixie-clock/tree/master/example">Example Arduino & Particle Photon Code</a>
 - <a href="https://github.com/marcinsaj/IN2-Binary-Nixie-Clock/blob/master/datasheet/VCC-Settings-IN2-Binary-Nixie-Clock.pdf">VCC Settings</a>
 - <a href="http://bit.ly/IN2-BNC-Schematic">Schematic IN-2 Binary Nixie Clock</a>
