@@ -1,7 +1,8 @@
 # IN-2 Binary Nixie Clock - Assembly Instruction
 
 <p align="center"><img src="https://github.com/marcinsaj/IN2-Binary-Nixie-Clock/blob/master/extras/assembly-instruction/in2-binary-nixie-clock-assembly-instruction_12.png"></p>
-### 1. PH9 - 1 x 3 pin angled, male
+
+## 1. PH9 - 1 x 3 pin angled, male
 <p align="center"><img src="https://github.com/marcinsaj/IN2-Binary-Nixie-Clock/blob/master/extras/assembly-instruction/images/in2-binary-nixie-clock-assembly-instruction-images_01.jpg"></p>
 
 <p align="center"><img src="https://raw.githubusercontent.com/marcinsaj/IN2-Binary-Nixie-Clock/master/extras/VCC-Settings-IN2-Binary-Nixie-Clock.jpg"></p>
