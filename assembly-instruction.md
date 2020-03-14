@@ -46,12 +46,16 @@
 
 <p align="center"><img src="https://github.com/marcinsaj/IN2-Binary-Nixie-Clock/blob/master/extras/assembly-instruction/in2-binary-nixie-clock-assembly-instruction_06.png"></p>
 
+## 10. Spacers M3-20 mm
 <p align="center"><img src="https://github.com/marcinsaj/IN2-Binary-Nixie-Clock/blob/master/extras/assembly-instruction/in2-binary-nixie-clock-assembly-instruction_07.png"></p>
 
+## 11. Soldering
 <p align="center"><img src="https://github.com/marcinsaj/IN2-Binary-Nixie-Clock/blob/master/extras/assembly-instruction/in2-binary-nixie-clock-assembly-instruction_08.png"></p>
 
+## 12. Cutting
 <p align="center"><img src="https://github.com/marcinsaj/IN2-Binary-Nixie-Clock/blob/master/extras/assembly-instruction/in2-binary-nixie-clock-assembly-instruction_09.png"></p>
 
+## 12. Module installation
 <p align="center"><img src="https://github.com/marcinsaj/IN2-Binary-Nixie-Clock/blob/master/extras/assembly-instruction/images/in2-binary-nixie-clock-assembly-instruction-images_12.jpg"></p>
 
 <p align="center"><img src="https://github.com/marcinsaj/IN2-Binary-Nixie-Clock/blob/master/extras/assembly-instruction/in2-binary-nixie-clock-assembly-instruction_10.png"></p>
