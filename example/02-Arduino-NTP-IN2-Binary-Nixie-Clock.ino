@@ -246,8 +246,7 @@ void DisplayTime()
   timeMinute = now.minute();
   timeHour = now.hour();
  
-  //if(timeHour == timeToSynchronizeTime && timeMinute == 0 && timeSecond == 0)
-  if(timeHour == 3 && timeMinute == 0 && timeSecond == 0)
+  if(timeHour == timeToSynchronizeTime && timeMinute == 0 && timeSecond == 0)
   {
     timeToSynchronizeTimeFlag = 1;  
   }
